@@ -34,10 +34,13 @@ function createLinks() {
                 a.className = 'btn';
                 a.textContent = link.name;
                 
-                // Это гарантирует, что ссылка откроется в новой вкладке 
-                // и защита YouTube/Zen не сработает
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
+                // ХАК: Вместо обычного клика используем top.location
+                // Это гарантирует, что сайт откроется ВМЕСТО таба,
+                // и браузер не будет ругаться на безопасность (Zen).
+                a.onclick = function(e) {
+                    e.preventDefault();
+                    window.top.location.href = this.href;
+                };
                 
                 container.appendChild(a);
             });
@@ -45,5 +48,4 @@ function createLinks() {
     });
 }
 
-// Запуск отрисовки ссылок сразу после загрузки страницы
 document.addEventListener('DOMContentLoaded', createLinks);
