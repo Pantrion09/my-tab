@@ -1,32 +1,28 @@
 const linkCategories = {
     tools: [
         { name: "ChatGPT", url: "https://chatgpt.com/" },
+        { name: "Gemini", url: "https://gemini.google.com//" },
         { name: "Deepseek", url: "https://chat.deepseek.com/" },
-        { name: "Google Drive", url: "https://drive.google.com" },
-        { name: "Gmail", url: "https://mail.google.com" },
-        { name: "Wikipedia", url: "https://www.wikipedia.org" },
-        { name: "Google Translate", url: "https://translate.google.com/" },
-        { name: "Arch Linux", url: "https://archlinux.org/" },
+        { name: "Yandex Translate", url: "https://translate.yandex.ru//" }
+        { name: "GGTW", url: "https://ggntw.com/steam//" }
+        { name: "HdRezka", url: "https://hdrezka.co//" }
+        { name: "RuTracker", url: "https://rutracker.org//" }
+        { name: "VSthemes", url: "https://vsthemes.org//" }
+
     ],
     social: [
-        { name: "Twitter", url: "https://www.twitter.com/" },
         { name: "Reddit", url: "https://www.reddit.com" },
-        { name: "Discord", url: "https://discord.com" },
-        { name: "Telegram", url: "https://telegram.org/" },
         { name: "Github", url: "https://github.com" },
     ],
     content: [
         { name: "Spotify", url: "https://spotify.com" },
         { name: "Twitch", url: "https://www.twitch.tv" },
-        { name: "Wallhaven", url: "https://wallhaven.cc" },
         { name: "YouTube Music", url: "https://music.youtube.com" },
         { name: "YouTube", url: "https://www.youtube.com" },
-        { name: "Soundcloud", url: "https://soundcloud.com/" },
         { name: "Pinterest", url: "https://www.pinterest.com/" },
-        { name: "TikTok", url: "https://www.tiktok.com/en/" },
+        { name: "Inoriginal", url: "https://inoriginal.net//" },
     ]
 };
-
 function createLinks() {
     const toolsContainer = document.getElementById('tools-links');
     linkCategories.tools.forEach(link => {
