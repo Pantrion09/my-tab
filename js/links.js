@@ -1,13 +1,13 @@
 const linkCategories = {
     tools: [
         { name: "ChatGPT", url: "https://chatgpt.com/" },
-        { name: "Gemini", url: "https://gemini.google.com//" },
+        { name: "Gemini", url: "https://gemini.google.com/" },
         { name: "Deepseek", url: "https://chat.deepseek.com/" },
-        { name: "Yandex Translate", url: "https://translate.yandex.ru//" },
-        { name: "GGTW", url: "https://ggntw.com/steam//" },
-        { name: "HdRezka", url: "https://hdrezka.co//" },
-        { name: "RuTracker", url: "https://rutracker.org//" },
-        { name: "VSthemes", url: "https://vsthemes.org//" }
+        { name: "Yandex Translate", url: "https://translate.yandex.ru/" },
+        { name: "GGTW", url: "https://ggntw.com/steam/" },
+        { name: "HdRezka", url: "https://hdrezka.co/" },
+        { name: "RuTracker", url: "https://rutracker.org/" },
+        { name: "VSthemes", url: "https://vsthemes.org/" }
     ],
     social: [
         { name: "Reddit", url: "https://www.reddit.com" },
@@ -19,58 +19,63 @@ const linkCategories = {
         { name: "YouTube Music", url: "https://music.youtube.com" },
         { name: "YouTube", url: "https://www.youtube.com" },
         { name: "Pinterest", url: "https://www.pinterest.com/" },
-        { name: "Inoriginal", url: "https://inoriginal.net//" }
+        { name: "Inoriginal", url: "https://inoriginal.net/" }
     ]
 };
+
 function createLinks() {
+    // Чистим и заполняем Tools
     const toolsContainer = document.getElementById('tools-links');
-    linkCategories.tools.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.className = 'btn';
-        linkElement.textContent = link.name;
-        linkElement.addEventListener('click', handleLinkClick);
-        toolsContainer.appendChild(linkElement);
-    });
-    
+    if (toolsContainer) {
+        toolsContainer.innerHTML = '';
+        linkCategories.tools.forEach(link => {
+            toolsContainer.appendChild(createLinkElement(link));
+        });
+    }
+
+    // Чистим и заполняем Social
     const socialContainer = document.getElementById('social-links');
-    linkCategories.social.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.className = 'btn';
-        linkElement.textContent = link.name;
-        linkElement.addEventListener('click', handleLinkClick);
-        socialContainer.appendChild(linkElement);
-    });
-    
+    if (socialContainer) {
+        socialContainer.innerHTML = '';
+        linkCategories.social.forEach(link => {
+            socialContainer.appendChild(createLinkElement(link));
+        });
+    }
+
+    // Чистим и заполняем Content
     const contentContainer = document.getElementById('content-links');
-    linkCategories.content.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.className = 'btn';
-        linkElement.textContent = link.name;
-        linkElement.addEventListener('click', handleLinkClick);
-        contentContainer.appendChild(linkElement);
-    });
+    if (contentContainer) {
+        contentContainer.innerHTML = '';
+        linkCategories.content.forEach(link => {
+            contentContainer.appendChild(createLinkElement(link));
+        });
+    }
+}
+
+function createLinkElement(link) {
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.className = 'btn';
+    a.textContent = link.name;
+    
+    // Добавляем обработку клика для анимации загрузки
+    a.addEventListener('click', handleLinkClick);
+    return a;
 }
 
 function handleLinkClick(e) {
     e.preventDefault();
-    
-    showLoader();
-    
-    setTimeout(() => {
-        window.location.href = this.href;
-    }, 300);
-}
-
-function showLoader() {
+    const href = e.currentTarget.href;
     const loader = document.getElementById('loader');
+    
     if (loader) {
         loader.classList.remove('hidden');
     }
+    
+    setTimeout(() => {
+        window.location.href = href;
+    }, 300);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    createLinks();
-});
+// Запуск при загрузке
+document.addEventListener('DOMContentLoaded', createLinks);
