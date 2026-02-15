@@ -14,6 +14,5 @@ A clean and cozy custom startpage for your browser that replaces the default new
 3. Use a browser extension like *Custom New Tab URL* (Chrome) or *New Tab Override* (Firefox)
 4. Set the path to your local `index.html` file
 
-**Live Preview:** [Homely](https://bogdantalant.github.io/Homely/)
 
 Easy to customize. No dependencies or build tools required.
