@@ -1,6 +1,6 @@
 const linkCategories = {
     tools: [
-        { name: "ChatGPT", url: "https://com-x.life/home/" },
+        { name: "Manga", url: "https://com-x.life/home/" },
         { name: "ChatGPT", url: "https://chatgpt.com/" },
         { name: "Gemini", url: "https://gemini.google.com/" },
         { name: "Deepseek", url: "https://chat.deepseek.com/" },
