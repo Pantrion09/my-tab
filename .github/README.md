@@ -16,6 +16,3 @@ A clean and cozy custom startpage for your browser that replaces the default new
 
 
 Easy to customize. No dependencies or build tools required.
-
-
-https://github.com/bogdantalant - original (forked by me for me)
