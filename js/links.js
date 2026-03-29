@@ -20,7 +20,7 @@ const linkCategories = {
         { name: "Pinterest", url: "https://www.pinterest.com/" },
         { name: "Inoriginal", url: "https://inoriginal.net/" }
     ],
-    study: [
+    content: [
         { name: "TheVerge", url: "https://www.theverge.com/" },
         { name: "XDA", url: "https://www.xda-developers.com/" },
         { name: "1600.lol", url: "https://1600.lol/" },
