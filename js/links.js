@@ -13,14 +13,19 @@ const linkCategories = {
     social: [
         { name: "Reddit", url: "https://www.reddit.com" },
         { name: "Github", url: "https://github.com" }
-    ],
-    content: [
         { name: "Spotify", url: "https://open.spotify.com" },
         { name: "Twitch", url: "https://www.twitch.tv" },
         { name: "YouTube Music", url: "https://music.youtube.com" },
         { name: "YouTube", url: "https://www.youtube.com" },
         { name: "Pinterest", url: "https://www.pinterest.com/" },
         { name: "Inoriginal", url: "https://inoriginal.net/" }
+    ],
+    study: [
+        { name: "TheVerge", url: "https://www.theverge.com/" },
+        { name: "XDA", url: "https://www.xda-developers.com/" },
+        { name: "1600.lol", url: "https://1600.lol/" },
+        { name: "OnePrep", url: "https://www.oneprep.xyz/question-bank/" },
+        { name: "Desmos", url: "https://www.desmos.com/calculator?lang=ru/" },
     ]
 };
 
