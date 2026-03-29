@@ -24,6 +24,7 @@ const linkCategories = {
         { name: "TheVerge", url: "https://www.theverge.com/" },
         { name: "XDA", url: "https://www.xda-developers.com/" },
         { name: "1600.lol", url: "https://1600.lol/" },
+        { name: "LoFi", url: "https://lofimusic.app/" },
         { name: "OnePrep", url: "https://www.oneprep.xyz/question-bank/" },
         { name: "Desmos", url: "https://www.desmos.com/calculator?lang=ru" } 
     ]
