@@ -12,7 +12,7 @@ const linkCategories = {
     ],
     social: [
         { name: "Reddit", url: "https://www.reddit.com" },
-        { name: "Github", url: "https://github.com" }, // ИСПРАВЛЕНО: добавлена запятая
+        { name: "Github", url: "https://github.com" }, 
         { name: "Spotify", url: "https://open.spotify.com" },
         { name: "Twitch", url: "https://www.twitch.tv" },
         { name: "YouTube Music", url: "https://music.youtube.com" },
@@ -25,7 +25,7 @@ const linkCategories = {
         { name: "XDA", url: "https://www.xda-developers.com/" },
         { name: "1600.lol", url: "https://1600.lol/" },
         { name: "OnePrep", url: "https://www.oneprep.xyz/question-bank/" },
-        { name: "Desmos", url: "https://www.desmos.com/calculator?lang=ru" } // ИСПРАВЛЕНО: убран лишний / в конце
+        { name: "Desmos", url: "https://www.desmos.com/calculator?lang=ru" } 
     ]
 };
 
